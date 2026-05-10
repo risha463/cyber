@@ -1,678 +1,662 @@
 <!DOCTYPE HTML>
 <!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-	Modified by Risha Gupta for Cybersecurity Portfolio - Complete 600+ Lines Working Code
+Dimension by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Cybersecurity Portfolio - Risha Gupta | Delhi</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Risha Gupta - Cybersecurity Expert | Web Security Testing, Python Automation, SIEM Analysis, Network Security Projects" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			/* Custom CSS for Complete Working Portfolio - 600+ Lines */
-			html { scroll-behavior: smooth; }
-			body { font-family: 'Arial', sans-serif; }
-			
-			/* Projects Toggle Animation */
-			#projects-container { 
-				display: none; 
-				opacity: 0; 
-				transform: translateY(20px);
-				transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-			}
-			#projects-container.active { 
-				display: block; 
-				opacity: 1; 
-				transform: translateY(0);
-			}
-			
-			/* Project Grid - Responsive */
-			.project-grid { 
-				display: grid; 
-				grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-				gap: 2rem; 
-				margin: 3rem 0; 
-				padding: 2rem;
-			}
-			
-			/* Project Cards */
-			.project-card { 
-				background: linear-gradient(145deg, rgba(0,20,40,0.95), rgba(0,50,100,0.95)); 
-				padding: 2rem; 
-				border-radius: 12px; 
-				border: 2px solid rgba(0,255,255,0.3);
-				box-shadow: 0 8px 32px rgba(0,255,255,0.1);
-				transition: all 0.4s ease;
-				position: relative;
-				overflow: hidden;
-			}
-			.project-card::before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: -100%;
-				width: 100%;
-				height: 100%;
-				background: linear-gradient(90deg, transparent, rgba(0,255,255,0.2), transparent);
-				transition: left 0.5s;
-			}
-			.project-card:hover::before { left: 100%; }
-			.project-card:hover { 
-				transform: translateY(-12px) scale(1.02); 
-				border-color: #00ffff;
-				box-shadow: 0 20px 60px rgba(0,255,255,0.4);
-			}
-			
-			.project-icon { 
-				font-size: 3rem; 
-				display: block; 
-				text-align: center;
-				margin-bottom: 1rem;
-				filter: drop-shadow(0 0 10px currentColor);
-			}
-			.project-card h3 { 
-				color: #00ffff; 
-				font-size: 1.4rem; 
-				margin-bottom: 1rem;
-				text-align: center;
-			}
-			.project-card p { 
-				color: #ccc; 
-				line-height: 1.6;
-				margin-bottom: 1.5rem;
-			}
-			
-			/* Project Detail Sections */
-			.project-detail {
-				background: rgba(0,0,0,0.85);
-				padding: 4rem 2rem;
-				margin: 2rem 0;
-				border-radius: 12px;
-				border-left: 5px solid #00ffff;
-			}
-			.project-detail h2 {
-				color: #00ffff;
-				text-align: center;
-				font-size: 2.5rem;
-				margin-bottom: 2rem;
-			}
-			.project-screenshot {
-				width: 100%;
-				max-width: 800px;
-				margin: 2rem auto;
-				display: block;
-				border-radius: 8px;
-				box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-			}
-			
-			/* Work Header Click Effect */
-			#work h2 {
-				cursor: pointer;
-				transition: all 0.3s ease;
-			}
-			#work h2:hover {
-				color: #00ffff !important;
-				text-shadow: 0 0 20px rgba(0,255,255,0.5);
-			}
-			
-			/* Mobile Responsive */
-			@media (max-width: 768px) {
-				.project-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-				.project-card { padding: 1.5rem; }
-				.project-detail { padding: 2rem 1rem; }
-			}
-			
-			/* Loading Animation */
-			.loader {
-				border: 4px solid #f3f3f3;
-				border-top: 4px solid #00ffff;
-				border-radius: 50%;
-				width: 40px;
-				height: 40px;
-				animation: spin 1s linear infinite;
-				margin: 2rem auto;
-			}
-			@keyframes spin {
-				0% { transform: rotate(0deg); }
-				100% { transform: rotate(360deg); }
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+<head>
+<title>Dimension by HTML5 UP</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<style>
+.project-content {
+    display: none;
+    margin-top: 2rem;
+}
+.project-content.active {
+    display: block;
+}
+</style>
+</head>
+<body class="is-preload">
 
-		<!-- Wrapper -->
-		<div id="wrapper">
+<!-- Wrapper -->
+<div id="wrapper">
 
-			<!-- Header -->
-			<header id="header">
-				<div class="logo">
-					<span class="icon fa-shield-alt"></span>
-				</div>
-				<div class="content">
-					<div class="inner">
-						<h1>Risha Gupta</h1>
-						<p>Cybersecurity Expert & Python Developer<br />
-						Web Security Testing | SIEM Analysis | Network Security<br />
-						<a href="https://github.com/risha463" target="_blank">GitHub</a> | Delhi, India</p>
-					</div>
-				</div>
-				<nav>
-					<ul>
-						<li><a href="#intro">Home</a></li>
-						<li><a href="#work" onclick="toggleProjects(event)">Projects</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</nav>
-			</header>
+<!-- Header -->
+<header id="header">
+<div class="logo">
+<span class="icon fa-gem"></span>
+</div>
+<div class="content">
+<div class="inner">
+<h1>Dimension</h1>
+<p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
+for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
+</div>
+</div>
+<nav>
+<ul>
+<li><a href="#intro">Intro</a></li>
+<li><a href="#work">Work</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
 
-			<!-- Main -->
-			<div id="main">
+<!-- Main -->
+<div id="main">
 
-				<!-- Intro -->
-				<article id="intro">
-					<h2 class="major">Cybersecurity Portfolio</h2>
-					<span class="image main"><img src="images/pic01.jpg" alt="Cybersecurity Hero" /></span>
-					<p>Complete collection of my cybersecurity labs, security testing, Python automation scripts, SIEM investigations, and network analysis projects. By the way, check out my <a href="#work" onclick="toggleProjects(event)">awesome work</a>.</p>
-					<p>Expertise in Web Application Security Testing (DVWA, SQL Injection, XSS), SIEM platforms (Splunk), Python threat detection systems, Linux monitoring, Wireshark packet analysis, and secure authentication systems.</p>
-				</article>
+<!-- Intro -->
+<article id="intro">
+<h2 class="major">Intro</h2>
+<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+</article>
 
-				<!-- Work - Main Projects Section -->
-				<article id="work">
-					<h2 class="major" onclick="toggleProjects(event)">🔐 Cybersecurity Projects (Click to Expand)</h2>
-					
-					<!-- Projects Loader -->
-					<div id="projects-loader" class="loader" style="display:none;"></div>
-					
-					<!-- Projects Grid Container -->
-					<div id="projects-container">
-						<div class="project-grid">
-							
-							<!-- Project 1: Web Security Testing -->
-							<div class="project-card">
-								<span class="project-icon">🔐</span>
-								<h3>Web Application Security Testing</h3>
-								<p>Complete DVWA security assessment including SQL Injection, Authentication Bypass, Reflected XSS testing using manual and automated techniques (SQLMap, OWASP ZAP).</p>
-								<ul class="actions">
-									<li><a href="#websecurity" class="button primary">View Full Project</a></li>
-									<li><a href="https://github.com/risha463/Web-security-testing_" target="_blank" class="button">GitHub Repo</a></li>
-								</ul>
-							</div>
+<!-- Work -->
+<article id="work">
+<h2 class="major">Cybersecurity Projects</h2>
 
-							<!-- Project 2: Splunk SIEM -->
-							<div class="project-card">
-								<span class="project-icon">🛡</span>
-								<h3>SIEM - Splunk Log Analysis</h3>
-								<p>Advanced security monitoring and log analysis project using Splunk SIEM platform for threat detection and incident response.</p>
-								<ul class="actions">
-									<li><a href="#splunk" class="button primary">View Details</a></li>
-								</ul>
-							</div>
+<p>
+    Collection of my cybersecurity labs, security testing,
+    Python automation, SIEM investigations, and network analysis projects.
+</p>
 
-							<!-- Project 3: Phishing Detector -->
-							<div class="project-card">
-								<span class="project-icon">🌐</span>
-								<h3>Phishing Website Detector</h3>
-								<p>Python-based machine learning system for real-time phishing website detection and classification.</p>
-								<ul class="actions">
-									<li><a href="#phishingdetector" class="button primary">View Project</a></li>
-								</ul>
-							</div>
+<hr />
 
-							<!-- Project 4: Linux Monitoring -->
-							<div class="project-card">
-								<span class="project-icon">🖥</span>
-								<h3>Linux System Monitoring</h3>
-								<p>Comprehensive Linux system monitoring solution for suspicious activity detection and security auditing.</p>
-								<ul class="actions">
-									<li><a href="#linuxmonitoring" class="button primary">View Details</a></li>
-								</ul>
-							</div>
+<!-- Project Buttons -->
+<div class="project-buttons">
+    <h3>🔐 Web Application Security Testing</h3>
+    <ul class="actions">
+        <li>
+            <a href="#websecurity" class="button primary project-trigger" data-target="websecurity">
+                Open Project
+            </a>
+        </li>
+    </ul>
 
-							<!-- Project 5: Wireshark Analysis -->
-							<div class="project-card">
-								<span class="project-icon">📡</span>
-								<h3>Wireshark Traffic Analysis</h3>
-								<p>Deep packet inspection and protocol analysis using Wireshark for network security investigations.</p>
-								<ul class="actions">
-									<li><a href="#wireshark" class="button primary">Analyze Packets</a></li>
-								</ul>
-							</div>
+    <hr />
 
-							<!-- Project 6: Secure Login -->
-							<div class="project-card">
-								<span class="project-icon">🔒</span>
-								<h3>Secure Login System</h3>
-								<p>Production-ready Python authentication system with advanced security protections and encryption.</p>
-								<ul class="actions">
-									<li><a href="#loginproject" class="button primary">View System</a></li>
-								</ul>
-							</div>
+    <h3>🛡 SIEM - Splunk</h3>
+    <ul class="actions">
+        <li>
+            <a href="#splunk" class="button primary project-trigger" data-target="splunk">
+                Open Project
+            </a>
+        </li>
+    </ul>
 
-							<!-- Project 7: Threat Detection -->
-							<div class="project-card">
-								<span class="project-icon">🐍</span>
-								<h3>Smart Threat Detection</h3>
-								<p>AI-powered suspicious activity detection system built with Python and machine learning algorithms.</p>
-								<ul class="actions">
-									<li><a href="#threatdetection" class="button primary">View Detection</a></li>
-								</ul>
-							</div>
+    <hr />
 
-							<!-- Project 8: ML Dashboard -->
-							<div class="project-card">
-								<span class="project-icon">📊</span>
-								<h3>Employee Salary Predictor</h3>
-								<p>Machine learning dashboard built with Streamlit for salary prediction and data visualization.</p>
-								<ul class="actions">
-									<li><a href="#salarypredictor" class="button primary">Launch Dashboard</a></li>
-								</ul>
-							</div>
+    <h3>🌐 Phishing Website Detector</h3>
+    <ul class="actions">
+        <li>
+            <a href="#phishingdetector" class="button primary project-trigger" data-target="phishingdetector">
+                Open Project
+            </a>
+        </li>
+    </ul>
 
-						</div>
-					</div>
-				</article>
+    <hr />
 
-				<!-- Detailed Project Sections (Auto-scroll targets) -->
+    <h3>🖥 Linux Monitoring Project</h3>
+    <ul class="actions">
+        <li>
+            <a href="#linuxmonitoring" class="button primary project-trigger" data-target="linuxmonitoring">
+                Open Project
+            </a>
+        </li>
+    </ul>
 
-				<!-- Web Security Detailed -->
-				<article id="websecurity" class="project-detail">
-					<h2>🔐 DVWA Web Application Security Testing</h2>
-					<span class="image main"><img src="images/sql_manual1.png" alt="SQL Injection Manual Testing" class="project-screenshot" /></span>
-					<p><strong>Complete security assessment</strong> performed on DVWA using both manual testing and automated tools. Covered SQL Injection, Authentication Security Testing, and Reflected XSS vulnerability analysis.</p>
-					<p><strong>Tools Used:</strong> DVWA, XAMPP, SQLMap, OWASP ZAP, Chrome DevTools, Burp Suite</p>
-					
-					<h3>🔥 SQL Injection Exploitation</h3>
-					<ul>
-						<li>Manual SQL Injection payloads tested</li>
-						<li>Authentication bypass achieved</li>
-						<li>Complete database extraction</li>
-						<li>Users table dump with hashed passwords</li>
-						<li>SQLMap full automation scripts</li>
-					</ul>
-					<p><strong>Key Findings:</strong> Critical SQL Injection vulnerability confirmed. Complete database compromise possible. Sensitive user data fully exposed.</p>
-					<span class="image main"><img src="images/sqlmap1.png" alt="SQLMap Automated Exploitation" class="project-screenshot" /></span>
+    <hr />
 
-					<h3>🔥 Authentication & Session Testing</h3>
-					<ul>
-						<li>Weak default credentials discovered</li>
-						<li>No account lockout mechanism</li>
-						<li>Unlimited brute-force attempts allowed</li>
-						<li>Broken session management detected</li>
-						<li>Insecure session cookies (no HttpOnly/Secure flags)</li>
-					</ul>
-					<span class="image main"><img src="images/Authentication_Flaws_cookie_test1.png" alt="Authentication Flaws" class="project-screenshot" /></span>
+    <h3>📡 Wireshark Traffic Analysis</h3>
+    <ul class="actions">
+        <li>
+            <a href="#wireshark" class="button primary project-trigger" data-target="wireshark">
+                Open Project
+            </a>
+        </li>
+    </ul>
 
-					<h3>🔥 Reflected XSS Testing</h3>
-					<ul>
-						<li>Manual XSS payload injection</li>
-						<li>HTML/JS reflection without sanitization</li>
-						<li>OWASP ZAP active scanning</li>
-						<li>High-risk XSS vulnerability confirmed</li>
-					</ul>
-					<p>Reflected input allowed arbitrary JavaScript execution in victim's browser context.</p>
-					<span class="image main"><img src="images/XSS_automated_test2.png" alt="XSS Automated Test" class="project-screenshot" /></span>
+    <hr />
 
-					<h3>🛡 Skills Demonstrated</h3>
-					<ul>
-						<li>OWASP Top 10 Vulnerability Testing</li>
-						<li>SQL Injection Manual & Automated</li>
-						<li>Authentication & Session Security</li>
-						<li>Cross-Site Scripting (XSS)</li>
-						<li>Web Application Penetration Testing</li>
-						<li>Security Tool Proficiency</li>
-					</ul>
+    <h3>🔐 Strong Login System</h3>
+    <ul class="actions">
+        <li>
+            <a href="#loginproject" class="button primary project-trigger" data-target="loginproject">
+                Open Project
+            </a>
+        </li>
+    </ul>
 
-					<h3>⚠️ Ethical Disclaimer</h3>
-					<p>All testing performed exclusively on <strong>DVWA (Damn Vulnerable Web Application)</strong> - a deliberately vulnerable training environment designed for ethical security learning. Never test on production systems without explicit authorization.</p>
-				</article>
+    <hr />
 
-				<!-- Splunk SIEM -->
-				<article id="splunk" class="project-detail">
-					<h2>🛡 SIEM - Splunk Security Monitoring</h2>
-					<p>Comprehensive log analysis and security monitoring implementation using enterprise-grade Splunk SIEM platform.</p>
-					<ul>
-						<li>Real-time security event correlation</li>
-						<li>Custom threat hunting queries (SPL)</li>
-						<li>Security dashboards and alerts</li>
-						<li>Incident response workflows</li>
-					</ul>
-					<p>Implemented advanced detection rules for lateral movement, privilege escalation, and data exfiltration patterns.</p>
-				</article>
+    <h3>🐍 Smart Threat Detection System</h3>
+    <ul class="actions">
+        <li>
+            <a href="#threatdetection" class="button primary project-trigger" data-target="threatdetection">
+                Open Project
+            </a>
+        </li>
+    </ul>
 
-				<!-- Phishing Detector -->
-				<article id="phishingdetector" class="project-detail">
-					<h2>🌐 Phishing Website Detector</h2>
-					<p>Machine learning-powered phishing detection system built entirely in Python.</p>
-					<ul>
-						<li>URL feature extraction (length, entropy, keywords)</li>
-						<li>Scikit-learn ML model training</li>
-						<li>Real-time detection REST API</li>
-						<li>Browser extension integration</li>
-					</ul>
-					<p>Achieved 97% detection accuracy on test dataset of 50K+ phishing and legitimate URLs.</p>
-				</article>
+    <hr />
 
-				<!-- Linux Monitoring -->
-				<article id="linuxmonitoring" class="project-detail">
-					<h2>🖥 Linux System Monitoring</h2>
-					<p>Advanced Linux security monitoring framework for suspicious activity detection.</p>
-					<ul>
-						<li>/var/log real-time monitoring</li>
-						<li>Process anomaly detection</li>
-						<li>File integrity monitoring</li>
-						<li>Network connection tracking</li>
-					</ul>
-				</article>
+    <h3>📊 Employee Salary Predictor (Streamlit)</h3>
+    <ul class="actions">
+        <li>
+            <a href="#salarypredictor" class="button primary project-trigger" data-target="salarypredictor">
+                Open Project
+            </a>
+        </li>
+    </ul>
+</div>
 
-				<!-- Wireshark -->
-				<article id="wireshark" class="project-detail">
-					<h2>📡 Wireshark Traffic Analysis</h2>
-					<p>Professional network packet analysis and protocol dissection investigations.</p>
-					<ul>
-						<li>TCP/IP protocol deep analysis</li>
-						<li>HTTP/HTTPS traffic inspection</li>
-						<li>DNS tunneling detection</li>
-						<li>Malware C2 communication</li>
-					</ul>
-				</article>
+<!-- Project Contents - Hidden by Default -->
+<div id="websecurity" class="project-content">
+    <h2 class="major">Web Security Projects</h2>
+    <span class="image main">
+        <img src="images/sql_manual1.png" alt="" />
+    </span>
+    <h3>🔐 DVWA Web Application Security Testing</h3>
+    <p>
+        <a href="https://github.com/risha463/Web-security-testing_" target="_blank">
+            🔗 View Full Project on GitHub
+        </a>
+    </p>
+    <p>
+        Complete security testing project performed on DVWA using manual and automated techniques.
+        This project includes SQL Injection, Authentication Security Testing,
+        and Reflected XSS vulnerability analysis.
+    </p>
+    <p>
+        Tools Used:
+        DVWA, XAMPP, SQLMap, OWASP ZAP, Chrome DevTools
+    </p>
 
-				<!-- Secure Login -->
-				<article id="loginproject" class="project-detail">
-					<h2>🔒 Secure Login System</h2>
-					<p>Production-grade Python authentication system with enterprise security features.</p>
-					<ul>
-						<li>Argon2 password hashing</li>
-						<li>Rate limiting & account lockout</li>
-						<li>JWT token authentication</li>
-						<li>2FA (TOTP) support</li>
-					</ul>
-				</article>
+    <hr />
 
-				<!-- Threat Detection -->
-				<article id="threatdetection" class="project-detail">
-					<h2>🐍 Smart Threat Detection System</h2>
-					<p>AI-driven behavioral threat detection engine built with Python ML libraries.</p>
-					<ul>
-						<li>User behavior analytics</li>
-						<li>Anomaly detection algorithms</li>
-						<li>Real-time alerting system</li>
-						<li>Threat intelligence integration</li>
-					</ul>
-				</article>
+    <h3>🔥 SQL Injection Testing</h3>
+    <p>
+        Performed manual SQL Injection and automated SQLMap exploitation
+        against DVWA running on XAMPP.
+    </p>
+    <ul>
+        <li>Authentication bypass</li>
+        <li>Database extraction</li>
+        <li>Users table dump</li>
+        <li>SQLMap automation</li>
+    </ul>
+    <p>
+        <b>Key Findings:</b>
+        SQL Injection confirmed, database compromised,
+        sensitive user data exposed.
+    </p>
+    <span class="image main">
+        <img src="images/sqlmap1.png" alt="" />
+    </span>
 
-				<!-- Salary Predictor -->
-				<article id="salarypredictor" class="project-detail">
-					<h2>📊 ML Salary Predictor Dashboard</h2>
-					<p>Interactive machine learning dashboard built with Streamlit framework.</p>
-					<ul>
-						<li>Random Forest regression model</li>
-						<li>Feature importance visualization</li>
-						<li>Interactive predictions</li>
-						<li>Model performance metrics</li>
-					</ul>
-				</article>
+    <hr />
 
-				<!-- About -->
-				<article id="about">
-					<h2 class="major">About Risha Gupta</h2>
-					<span class="image main"><img src="images/pic03.jpg" alt="About Me" /></span>
-					<p>Delhi-based Cybersecurity Specialist and Python Developer with hands-on experience in web application security testing, network analysis, SIEM platforms, and threat detection systems. Passionate about building secure systems and automating security operations.</p>
-					<p>Active contributor to open-source security projects. <strong>Skills:</strong> Python, Web Security (OWASP), SIEM (Splunk), Network Analysis (Wireshark), ML Security, Linux Security.</p>
-					<ul class="actions">
-						<li><a href="https://github.com/risha463" class="button primary" target="_blank">Full GitHub Profile</a></li>
-						<li><a href="https://linkedin.com/in/rishagupta" class="button">LinkedIn</a></li>
-					</ul>
-				</article>
+    <h3>🔥 Authentication Security Testing</h3>
+    <p>
+        Manual authentication and session management testing
+        performed using browser developer tools.
+    </p>
+    <ul>
+        <li>Weak credentials detected</li>
+        <li>No account lockout</li>
+        <li>Unlimited login attempts</li>
+        <li>Broken session management</li>
+        <li>Insecure cookies</li>
+    </ul>
+    <p>
+        Session fixation and brute-force weaknesses identified.
+    </p>
+    <span class="image main">
+        <img src="images/Authentication_Flaws_cookie_test1.png" alt="" />
+    </span>
 
-				<!-- Contact -->
-				<article id="contact">
-					<h2 class="major">Get In Touch</h2>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field half">
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" />
-							</div>
-							<div class="field half">
-								<label for="email">Email</label>
-								<input type="email" name="email" id="email" />
-							</div>
-							<div class="field">
-								<label for="message">Message</label>
-								<textarea name="message" id="message" rows="4" placeholder="Tell me about your cybersecurity project..."></textarea>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message" class="primary" /></li>
-							<li><input type="reset" value="Reset Form" /></li>
-						</ul>
-					</form>
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="https://github.com/risha463" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-						<li><a href="mailto:rishagupta@example.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-				</article>
+    <hr />
 
-				<!-- Elements (Documentation) -->
-				<article id="elements">
-					<h2 class="major">Technical Documentation</h2>
-					
-					<section>
-						<h3 class="major">Security Testing Methodology</h3>
-						<p>Follows <strong>OWASP Testing Guide v4</strong> standards with additional custom automation scripts.</p>
-						<ul>
-							<li>Reconnaissance & Information Gathering</li>
-							<li>Configuration & Deployment Management Testing</li>
-							<li>Identity Management Testing</li>
-							<li>Authentication Testing</li>
-							<li>Authorization Testing</li>
-							<li>Session Management Testing</li>
-							<li>Input Validation Testing</li>
-							<li>Error Handling Testing</li>
-							<li>Cryptography Testing</li>
-							<li>Business Logic Testing</li>
-							<li>Client-side Testing</li>
-						</ul>
-					</section>
+    <h3>🔥 Reflected XSS Testing</h3>
+    <p>
+        Tested DVWA Reflected XSS module manually and using OWASP ZAP.
+    </p>
+    <ul>
+        <li>Payload injection</li>
+        <li>HTML reflection analysis</li>
+        <li>ZAP active scan</li>
+        <li>High-risk XSS detection</li>
+    </ul>
+    <p>
+        Input was reflected without sanitization,
+        allowing JavaScript execution.
+    </p>
+    <span class="image main">
+        <img src="images/XSS_automated_test2.png" alt="" />
+    </span>
 
-					<section>
-						<h3 class="major">Tools & Technologies</h3>
-						<div class="table-wrapper">
-							<table>
-								<thead>
-									<tr>
-										<th>Category</th>
-										<th>Tools</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Web Testing</td>
-										<td>Burp Suite, OWASP ZAP, SQLMap</td>
-									</tr>
-									<tr>
-										<td>Network</td>
-										<td>Wireshark, tcpdump, Nmap</td>
-									</tr>
-									<tr>
-										<td>SIEM</td>
-										<td>Splunk, ELK Stack</td>
-									</tr>
-									<tr>
-										<td>Programming</td>
-										<td>Python, JavaScript, Bash</td>
-									</tr>
-									<tr>
-										<td>ML/AI</td>
-										<td>Scikit-learn, TensorFlow, Streamlit</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</section>
+    <hr />
 
-					<section>
-						<h3 class="major">Certifications</h3>
-						<ul class="alt">
-							<li>OWASP Web Security Testing</li>
-							<li>Python for Cybersecurity</li>
-							<li>Splunk Fundamentals</li>
-							<li>Ethical Hacking Essentials</li>
-						</ul>
-					</section>
-				</article>
+    <h3>🛡 Skills Demonstrated</h3>
+    <ul>
+        <li>Web Application Security Testing</li>
+        <li>SQL Injection Exploitation</li>
+        <li>Authentication Testing</li>
+        <li>Session Security Analysis</li>
+        <li>Cross-Site Scripting (XSS)</li>
+        <li>OWASP ZAP</li>
+        <li>SQLMap</li>
+    </ul>
 
-			</div>
+    <hr />
 
-			<!-- Footer -->
-			<footer id="footer">
-				<p class="copyright">&copy; 2026 Risha Gupta | Cybersecurity Portfolio. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a> | Photos: <a href="https://unsplash.com">Unsplash</a></p>
-			</footer>
+    <h3>⚠ Disclaimer</h3>
+    <p>
+        All testing was performed on DVWA,
+        a purposely vulnerable training environment.
+        These techniques were used strictly for ethical learning purposes.
+    </p>
+    
+    <ul class="actions">
+        <li><a href="#" class="button project-close" data-target="websecurity">Close Project</a></li>
+    </ul>
+</div>
 
-		</div>
+<!-- Other Project Placeholders - Add similar structure for others -->
+<div id="splunk" class="project-content">
+    <h2 class="major">🛡 SIEM - Splunk</h2>
+    <p>Log analysis and security monitoring project using Splunk SIEM. Content goes here...</p>
+    <ul class="actions">
+        <li><a href="#" class="button project-close" data-target="splunk">Close Project</a></li>
+    </ul>
+</div>
 
-		<!-- BG -->
-		<div id="bg"></div>
+<div id="phishingdetector" class="project-content">
+    <h2 class="major">🌐 Phishing Website Detector</h2>
+    <p>Python-based phishing website detection project. Content goes here...</p>
+    <ul class="actions">
+        <li><a href="#" class="button project-close" data-target="phishingdetector">Close Project</a></li>
+    </ul>
+</div>
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-		
-		<!-- Complete Custom JavaScript - 100+ Lines Functionality -->
-		<script>
-			// Global state
-			let projectsVisible = false;
-			let scrollDebounce = null;
+<div id="linuxmonitoring" class="project-content">
+    <h2 class="major">🖥 Linux Monitoring Project</h2>
+    <p>Linux system monitoring and suspicious activity investigation. Content goes here...</p>
+    <ul class="actions">
+        <li><a href="#" class="button project-close" data-target="linuxmonitoring">Close Project</a></li>
+    </ul>
+</div>
 
-			// Main Projects Toggle Function
-			function toggleProjects(event) {
-				event?.preventDefault();
-				
-				const container = document.getElementById('projects-container');
-				const loader = document.getElementById('projects-loader');
-				const workHeader = document.querySelector('#work h2');
-				
-				if (!projectsVisible) {
-					// Show projects with loading animation
-					loader.style.display = 'block';
-					setTimeout(() => {
-						loader.style.display = 'none';
-						container.classList.add('active');
-						projectsVisible = true;
-						workHeader.innerHTML = '🔐 Cybersecurity Projects <small style="opacity:0.7;">(Click to collapse)</small>';
-						
-						// Smooth scroll to projects
-						container.scrollIntoView({ 
-							behavior: 'smooth', 
-							block: 'start' 
-						});
-					}, 800);
-				} else {
-					// Hide projects
-					container.classList.remove('active');
-					projectsVisible = false;
-					workHeader.innerHTML = '🔐 Cybersecurity Projects (Click to Expand)';
-				}
-			}
+<div id="wireshark" class="project-content">
+    <h2 class="major">📡 Wireshark Traffic Analysis</h2>
+    <p>Packet analysis and protocol investigation using Wireshark. Content goes here...</p>
+    <ul class="actions">
+        <li><a href="#" class="button project-close" data-target="wireshark">Close Project</a></li>
+    </ul>
+</div>
 
-			// Enhanced Smooth Scrolling for All Links
-			document.addEventListener('DOMContentLoaded', function() {
-				// Navbar smooth scroll
-				document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-					anchor.addEventListener('click', function (e) {
-						e.preventDefault();
-						const targetId = this.getAttribute('href');
-						
-						if (targetId === '#work') {
-							toggleProjects(e);
-							return;
-						}
-						
-						const target = document.querySelector(targetId);
-						if (target) {
-							target.scrollIntoView({ 
-								behavior: 'smooth',
-								block: 'start'
-							});
-						}
-					});
-				});
+<div id="loginproject" class="project-content">
+    <h2 class="major">🔐 Strong Login System</h2>
+    <p>Secure Python login system with authentication protection. Content goes here...</p>
+    <ul class="actions">
+        <li><a href="#" class="button project-close" data-target="loginproject">Close Project</a></li>
+    </ul>
+</div>
 
-				// Page load animations
-				setTimeout(() => {
-					document.body.classList.remove('is-preload');
-				}, 100);
+<div id="threatdetection" class="project-content">
+    <h2 class="major">🐍 Smart Threat Detection System</h2>
+    <p>Python-based suspicious activity and threat detection system. Content goes here...</p>
+    <ul class="actions">
+        <li><a href="#" class="button project-close" data-target="threatdetection">Close Project</a></li>
+    </ul>
+</div>
 
-				// Project cards hover sound effect (optional)
-				const cards = document.querySelectorAll('.project-card');
-				cards.forEach(card => {
-					card.addEventListener('mouseenter', function() {
-						this.style.transform = 'translateY(-12px) scale(1.02)';
-					});
-					card.addEventListener('mouseleave', function() {
-						this.style.transform = 'translateY(0) scale(1)';
-					});
-				});
+<div id="salarypredictor" class="project-content">
+    <h2 class="major">📊 Employee Salary Predictor (Streamlit)</h2>
+    <p>Machine learning dashboard built using Streamlit. Content goes here...</p>
+    <ul class="actions">
+        <li><a href="#" class="button project-close" data-target="salarypredictor">Close Project</a></li>
+    </ul>
+</div>
 
-				// Intersection Observer for project details
-				const observerOptions = {
-					threshold: 0.1,
-					rootMargin: '0px 0px -50px 0px'
-				};
+</article>
 
-				const observer = new IntersectionObserver((entries) => {
-					entries.forEach(entry => {
-						if (entry.isIntersecting) {
-							entry.target.style.opacity = '1';
-							entry.target.style.transform = 'translateY(0)';
-						}
-					});
-				}, observerOptions);
+<!-- About -->
+<article id="about">
+<h2 class="major">About</h2>
+<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+</article>
 
-				// Observe all project detail sections
-				document.querySelectorAll('.project-detail').forEach(section => {
-					section.style.opacity = '0';
-					section.style.transform = 'translateY(30px)';
-					section.style.transition = 'all 0.6s ease';
-					observer.observe(section);
-				});
-			});
+<!-- Contact -->
+<article id="contact">
+<h2 class="major">Contact</h2>
+<form method="post" action="#">
+<div class="fields">
+<div class="field half">
+<label for="name">Name</label>
+<input type="text" name="name" id="name" />
+</div>
+<div class="field half">
+<label for="email">Email</label>
+<input type="text" name="email" id="email" />
+</div>
+<div class="field">
+<label for="message">Message</label>
+<textarea name="message" id="message" rows="4"></textarea>
+</div>
+</div>
+<ul class="actions">
+<li><input type="submit" value="Send Message" class="primary" /></li>
+<li><input type="reset" value="Reset" /></li>
+</ul>
+</form>
+<ul class="icons">
+<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+</ul>
+</article>
 
-			// Keyboard navigation support
-			document.addEventListener('keydown', function(e) {
-				if (e.key === 'Escape' && projectsVisible) {
-					toggleProjects();
-				}
-			});
+<!-- Elements -->
+<article id="elements">
+<h2 class="major">Elements</h2>
 
-			// Mobile menu toggle enhancement
-			function toggleMobileMenu() {
-				const nav = document.querySelector('nav ul');
-				nav.classList.toggle('mobile-open');
-			}
+<section>
+<h3 class="major">Text</h3>
+<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+<hr />
+<h2>Heading Level 2</h2>
+<h3>Heading Level 3</h3>
+<h4>Heading Level 4</h4>
+<h5>Heading Level 5</h5>
+<h6>Heading Level 6</h6>
+<hr />
+<h4>Blockquote</h4>
+<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+<h4>Preformatted</h4>
+<pre><code>i = 0;
 
-			// Copy email to clipboard
-			document.querySelector('.icon.solid.fa-envelope')?.addEventListener('click', function() {
-				navigator.clipboard.writeText('rishagupta@example.com');
-				this.style.color = '#00ff00';
-				setTimeout(() => this.style.color = '', 1000);
-			});
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
 
-			console.log('✅ Cybersecurity Portfolio Loaded Successfully - 600+ Lines Complete!');
-			console.log('🎯 Features: Projects Toggle | Smooth Scroll | Responsive Grid | Animations | Mobile Ready');
-		</script>
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+</section>
 
-	</body>
+<section>
+<h3 class="major">Lists</h3>
+
+<h4>Unordered</h4>
+<ul>
+<li>Dolor pulvinar etiam.</li>
+<li>Sagittis adipiscing.</li>
+<li>Felis enim feugiat.</li>
+</ul>
+
+<h4>Alternate</h4>
+<ul class="alt">
+<li>Dolor pulvinar etiam.</li>
+<li>Sagittis adipiscing.</li>
+<li>Felis enim feugiat.</li>
+</ul>
+
+<h4>Ordered</h4>
+<ol>
+<li>Dolor pulvinar etiam.</li>
+<li>Etiam vel felis viverra.</li>
+<li>Felis enim feugiat.</li>
+<li>Dolor pulvinar etiam.</li>
+<li>Etiam vel felis lorem.</li>
+<li>Felis enim et feugiat.</li>
+</ol>
+<h4>Icons</h4>
+<ul class="icons">
+<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+</ul>
+
+<h4>Actions</h4>
+<ul class="actions">
+<li><a href="#" class="button primary">Default</a></li>
+<li><a href="#" class="button">Default</a></li>
+</ul>
+<ul class="actions stacked">
+<li><a href="#" class="button primary">Default</a></li>
+<li><a href="#" class="button">Default</a></li>
+</ul>
+</section>
+
+<section>
+<h3 class="major">Table</h3>
+<h4>Default</h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Item One</td>
+<td>Ante turpis integer aliquet porttitor.</td>
+<td>29.99</td>
+</tr>
+<tr>
+<td>Item Two</td>
+<td>Vis ac commodo adipiscing arcu aliquet.</td>
+<td>19.99</td>
+</tr>
+<tr>
+<td>Item Three</td>
+<td> Morbi faucibus arcu accumsan lorem.</td>
+<td>29.99</td>
+</tr>
+<tr>
+<td>Item Four</td>
+<td>Vitae integer tempus condimentum.</td>
+<td>19.99</td>
+</tr>
+<tr>
+<td>Item Five</td>
+<td>Ante turpis integer aliquet porttitor.</td>
+<td>29.99</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td colspan="2"></td>
+<td>100.00</td>
+</tr>
+</tfoot>
+</table>
+</div>
+
+<h4>Alternate</h4>
+<div class="table-wrapper">
+<table class="alt">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Item One</td>
+<td>Ante turpis integer aliquet porttitor.</td>
+<td>29.99</td>
+</tr>
+<tr>
+<td>Item Two</td>
+<td>Vis ac commodo adipiscing arcu aliquet.</td>
+<td>19.99</td>
+</tr>
+<tr>
+<td>Item Three</td>
+<td> Morbi faucibus arcu accumsan lorem.</td>
+<td>29.99</td>
+</tr>
+<tr>
+<td>Item Four</td>
+<td>Vitae integer tempus condimentum.</td>
+<td>19.99</td>
+</tr>
+<tr>
+<td>Item Five</td>
+<td>Ante turpis integer aliquet porttitor.</td>
+<td>29.99</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td colspan="2"></td>
+<td>100.00</td>
+</tr>
+</tfoot>
+</table>
+</div>
+</section>
+
+<section>
+<h3 class="major">Buttons</h3>
+<ul class="actions">
+<li><a href="#" class="button primary">Primary</a></li>
+<li><a href="#" class="button">Default</a></li>
+</ul>
+<ul class="actions">
+<li><a href="#" class="button">Default</a></li>
+<li><a href="#" class="button small">Small</a></li>
+</ul>
+<ul class="actions">
+<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+</ul>
+<ul class="actions">
+<li><span class="button primary disabled">Disabled</span></li>
+<li><span class="button disabled">Disabled</span></li>
+</ul>
+</section>
+
+<section>
+<h3 class="major">Form</h3>
+<form method="post" action="#">
+<div class="fields">
+<div class="field half">
+<label for="demo-name">Name</label>
+<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+</div>
+<div class="field half">
+<label for="demo-email">Email</label>
+<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+</div>
+<div class="field">
+<label for="demo-category">Category</label>
+<select name="demo-category" id="demo-category">
+<option value="">-</option>
+<option value="1">Manufacturing</option>
+<option value="1">Shipping</option>
+<option value="1">Administration</option>
+<option value="1">Human Resources</option>
+</select>
+</div>
+<div class="field half">
+<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+<label for="demo-priority-low">Low</label>
+</div>
+<div class="field half">
+<input type="radio" id="demo-priority-high" name="demo-priority">
+<label for="demo-priority-high">High</label>
+</div>
+<div class="field half">
+<input type="checkbox" id="demo-copy" name="demo-copy">
+<label for="demo-copy">Email me a copy</label>
+</div>
+<div class="field half">
+<input type="checkbox" id="demo-human" name="demo-human" checked>
+<label for="demo-human">Not a robot</label>
+</div>
+<div class="field">
+<label for="demo-message">Message</label>
+<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+</div>
+</div>
+<ul class="actions">
+<li><input type="submit" value="Send Message" class="primary" /></li>
+<li><input type="reset" value="Reset" /></li>
+</ul>
+</form>
+</section>
+
+</article>
+
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+</footer>
+
+</div>
+
+<!-- BG -->
+<div id="bg"></div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+$(document).ready(function() {
+    // Project trigger click
+    $('.project-trigger').on('click', function(e) {
+        e.preventDefault();
+        var target = $(this).data('target');
+        $('.project-content').removeClass('active');
+        $('#' + target).addClass('active');
+        $('html, body').animate({
+            scrollTop: $('#' + target).offset().top - 100
+        }, 800);
+    });
+    
+    // Project close click
+    $('.project-close').on('click', function(e) {
+        e.preventDefault();
+        var target = $(this).data('target');
+        $('#' + target).removeClass('active');
+    });
+    
+    // Close all projects when clicking outside
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.project-content, .project-trigger').length) {
+            $('.project-content').removeClass('active');
+        }
+    });
+});
+</script>
+
+</body>
 </html>
