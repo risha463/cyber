@@ -272,22 +272,193 @@ for free under the <a href="https://html5up.net/license">Creative Commons</a> li
 </div>
 
 <!-- Other Project Placeholders - Add similar structure for others -->
+<!-- Replace the Splunk project content div with this: -->
 <div id="splunk" class="project-content">
     <h2 class="major">🛡 SIEM - Splunk</h2>
-    <p>Log analysis and security monitoring project using Splunk SIEM. Content goes here...</p>
+    
+    <p>
+        <a href="https://github.com/risha463/SIEM-Splunk" target="_blank">
+            🔗 [SIEM-Splunk](https://github.com/risha463/SIEM-Splunk)
+        </a>
+    </p>
+
+    <h3>📄 Incident Response Report — Task 2 (SIEM Analysis Using Splunk)</h3>
+    
+    <h4>🔐 1. Overview</h4>
+    <p>This project analyzes Windows Security Logs using Splunk SIEM to detect suspicious authentication attempts, identify brute-force behavior, classify incidents, and provide remediation steps.</p>
+
+    <h4>📁 2. Log Source Details</h4>
+    <ul>
+        <li><strong>Log File:</strong> windows_security_logs.txt</li>
+        <li><strong>Log Type:</strong> Windows Security Authentication Logs</li>
+        <li><strong>Sourcetype:</strong> log2metrics_keyvalue</li>
+        <li><strong>Index Used:</strong> task2_index</li>
+    </ul>
+
+    <h4>🎯 3. Objectives</h4>
+    <ul>
+        <li>Ingest logs into Splunk</li>
+        <li>Monitor authentication events</li>
+        <li>Detect failed & successful logins</li>
+        <li>Identify brute-force login patterns</li>
+        <li>Build visualizations</li>
+        <li>Prepare SOC-style incident report</li>
+    </ul>
+
+    <h4>🔍 4. Splunk Queries Used</h4>
+    <ul>
+        <li><code>✔ View All Events</code> <code>index="task2_index"</code></li>
+        <li><code>✔ Failed Login Attempts</code> <code>index="task2_index" "Failed Login"</code></li>
+        <li><code>✔ Successful Login Attempt</code> <code>index="task2_index" "Successful Login"</code></li>
+        <li><code>✔ Count of Failed Logins</code> <code>index="task2_index" "Failed Login" | stats count</code></li>
+        <li><code>✔ Failed Logins by IP Address</code> <code>index="task2_index" "Failed Login" | stats count by IpAddress</code></li>
+        <li><code>✔ EventID Breakdown (4624 / 4625)</code> <code>index="task2_index" | stats count by EventID</code></li>
+    </ul>
+
+    <span class="image main">
+        <img src="images/search_all_events.png" alt="Splunk Search All Events" />
+    </span>
+    <span class="image main">
+        <img src="images/pie_chart_Status.png" alt="Status Pie Chart" />
+    </span>
+
+    <h4>📊 5. Visualizations Created</h4>
+    <ul>
+        <li>✔ EventID Breakdown Pie Chart</li>
+        <li>✔ Failed Login Attempts Bar Chart</li>
+        <li>✔ Successful vs Failed Logins</li>
+        <li>✔ Status Pie Chart</li>
+        <li>✔ Account Name Pie Chart</li>
+    </ul>
+
+    <h4>🚨 6. Findings (Alert Analysis)</h4>
+    
+    <h5>🔹 Summary of Events:</h5>
+    <table style="width:100%; border-collapse: collapse;">
+        <tr><th>EventID</th><th>Meaning</th><th>Count</th></tr>
+        <tr><td>4625</td><td>Failed Login</td><td>3</td></tr>
+        <tr><td>4624</td><td>Successful Login</td><td>1</td></tr>
+    </table>
+
+    <h5>🔹 Suspicious Indicators:</h5>
+    <ul>
+        <li>Same attacker IP: <strong>185.34.55.1</strong></li>
+        <li>Target account: <strong>admin</strong></li>
+        <li>3 failed attempts within seconds</li>
+        <li>Followed by 1 successful login</li>
+        <li><strong>👉 This is a confirmed brute-force attack pattern.</strong></li>
+    </ul>
+
+    <h4>🛑 7. Incident Classification</h4>
+    <ul>
+        <li><strong>Incident Type:</strong> Brute-Force Authentication Attack</li>
+        <li><strong>MITRE ATT&CK:</strong> T1110</li>
+        <li><strong>Severity:</strong> High</li>
+        <li><strong>Reason:</strong> Rapid failed attempts + final successful compromise.</li>
+    </ul>
+
+    <h4>🛠️ 8. Recommended Actions</h4>
+    
+    <h5>✔ Immediate:</h5>
+    <ul>
+        <li>Block IP 185.34.55.1</li>
+        <li>Force password reset of admin</li>
+        <li>Review session after compromise</li>
+        <li>Enable MFA</li>
+    </ul>
+
+    <h5>✔ Policy Fixes:</h5>
+    <ul>
+        <li>Enable Account Lockout Policies</li>
+        <li>Monitor EventID 4625 spikes</li>
+        <li>Restrict admin login from external IPs</li>
+    </ul>
+
+    <hr />
+
     <ul class="actions">
         <li><a href="#" class="button project-close" data-target="splunk">Close Project</a></li>
     </ul>
 </div>
 
+<!-- Replace the Phishing Detector project content div with this: -->
 <div id="phishingdetector" class="project-content">
     <h2 class="major">🌐 Phishing Website Detector</h2>
-    <p>Python-based phishing website detection project. Content goes here...</p>
+    
+    <p>
+        <a href="https://github.com/risha463/phishing-website-detector/tree/main" target="_blank">
+            🔗 [Phishing Website Detector](https://github.com/risha463/phishing-website-detector/tree/main)
+        </a>
+    </p>
+
+    <h3>🎯 Phishing Website Detector</h3>
+    <p>This is a Machine Learning project to detect phishing websites using the <strong>Random Forest Classifier</strong>.</p>
+
+    <h4>📁 Files in this Project</h4>
+    <ul>
+        <li><strong>Phishing_website.ipynb</strong> → Main Python code (Colab Notebook)</li>
+        <li><strong>phishing_final_clean.csv</strong> → Dataset used for training/testing</li>
+    </ul>
+
+    <h4>📊 Dataset Information</h4>
+    <p>The dataset includes features like:</p>
+    <ul>
+        <li><strong>UsingIP</strong> → Website has IP address instead of domain</li>
+        <li><strong>LongURL</strong> → Is the URL suspiciously long?</li>
+        <li><strong>PrefixSuffix</strong> → Uses hyphen in domain name?</li>
+        <li><strong>SubDomains, HTTPS, DomainRegLen</strong></li>
+        <li><strong>PageRank, WebsiteTraffic</strong> → Reputation factors</li>
+        <li><strong>class column</strong> → Target (1 = phishing, 0 = safe website)</li>
+    </ul>
+
+    <h4>🤖 ML Algorithm Used</h4>
+    <p><strong>Random Forest Classifier</strong><br/>
+    It is used because it gives good accuracy and works well for classification problems.</p>
+
+    <h4>✅ Model Accuracy</h4>
+    <p><strong>Accuracy = 96.78%</strong></p>
+    
+    <h5>Classification Report:</h5>
+    <table style="width:100%; border-collapse: collapse;">
+        <tr><th>Class</th><th>Precision</th><th>Recall</th><th>F1-Score</th></tr>
+        <tr><td>0 (Safe)</td><td>0.97</td><td>0.95</td><td>0.96</td></tr>
+        <tr><td>1 (Phishing)</td><td>0.96</td><td>0.98</td><td>0.97</td></tr>
+    </table>
+
+    <h4>🧠 Tools and Libraries Used</h4>
+    <ul>
+        <li>Python (Google Colab)</li>
+        <li>Pandas</li>
+        <li>Scikit-learn</li>
+        <li>Seaborn</li>
+        <li>Matplotlib</li>
+    </ul>
+
+    <h4>💡 Feature Highlights</h4>
+    <ul>
+        <li>✅ <strong>UsingIP</strong> → Website has IP address instead of domain</li>
+        <li>✅ <strong>LongURL</strong> → Is the URL suspiciously long?</li>
+        <li>✅ <strong>PrefixSuffix</strong> → Uses hyphen in domain name?</li>
+        <li>✅ <strong>HTTPS</strong> → Has valid HTTPS or not?</li>
+        <li>✅ <strong>PageRank, GoogleIndex</strong> → Reputation factors</li>
+    </ul>
+
+    <h4>🚀 Future Scope</h4>
+    <ul>
+        <li>Use Deep Learning models (like CNN) for better prediction</li>
+        <li>Deploy as a web application</li>
+        <li>Integrate real-time phishing detection in browsers</li>
+    </ul>
+
+    <h4>🙋‍♀️ Made By</h4>
+    <p><strong>Risha Gupta</strong><br/>MCA Student</p>
+
+    <hr />
+
     <ul class="actions">
         <li><a href="#" class="button project-close" data-target="phishingdetector">Close Project</a></li>
     </ul>
 </div>
-
 <div id="linuxmonitoring" class="project-content">
     <h2 class="major">🖥 Linux Monitoring Project</h2>
     <p>Linux system monitoring and suspicious activity investigation. Content goes here...</p>
