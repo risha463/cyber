@@ -461,15 +461,134 @@ for free under the <a href="https://html5up.net/license">Creative Commons</a> li
 </div>
 <div id="linuxmonitoring" class="project-content">
     <h2 class="major">🖥 Linux Monitoring Project</h2>
-    <p>Linux system monitoring and suspicious activity investigation. Content goes here...</p>
+    
+    <p>
+        <a href="https://github.com/risha463/-Linux-Monitoring-Project" target="_blank">
+            🔗 [Linux Monitoring Project](https://github.com/risha463/-Linux-Monitoring-Project)
+        </a>
+    </p>
+
+    <h3>📌 Linux Log Monitoring & Incident Response (SOC Practice)</h3>
+    <p>Hands-on Linux log monitoring and incident response in TryHackMe lab environment to simulate SOC analyst workflow.</p>
+
+    <h4>🛠 Skills & Concepts Practiced:</h4>
+    <ul>
+        <li>Linux log monitoring</li>
+        <li>Authentication log analysis</li>
+        <li>Process investigation</li>
+        <li>Malware detection</li>
+        <li>Network monitoring</li>
+        <li>Incident response</li>
+    </ul>
+
+    <h4>📂 Linux Directories Explored:</h4>
+    <ul>
+        <li><code>/var/log</code> - System and security logs</li>
+        <li><code>/tmp</code> - Temporary files / malware hiding</li>
+        <li><code>/etc</code> - System configuration files</li>
+        <li><code>/proc</code> - Running process information</li>
+    </ul>
+
+    <h4>🔍 Key Commands Used:</h4>
+    
+    <h5>Authentication Logs:</h5>
+    <pre><code>grep "Failed password" /var/log/auth.log
+grep "Accepted password" /var/log/auth.log</code></pre>
+
+    <h5>System Logs:</h5>
+    <pre><code>cat /var/log/syslog
+tail -f /var/log/syslog
+grep "error" /var/log/syslog</code></pre>
+
+    <h5>Process Investigation:</h5>
+    <pre><code>ps aux
+ps aux --sort=-%cpu
+kill -9 PID</code></pre>
+
+    <h5>Audit Log:</h5>
+    <pre><code>sudo ausearch -k file_thmsecret</code></pre>
+
+    <h4>🌐 Network Monitoring:</h4>
+    <pre><code>netstat -tulnp</code></pre>
+
+    <h4>🚫 IP Blocking:</h4>
+    <pre><code>sudo iptables -A INPUT -s ATTACKER_IP -j DROP</code></pre>
+
+    <h4>🧹 System Cleanup:</h4>
+    <pre><code>sudo apt autoremove
+sudo apt autoclean</code></pre>
+
+    <h4>📊 SOC Investigation Workflow:</h4>
+    <ul>
+        <li>Detected suspicious login attempts</li>
+        <li>Investigated logs and processes</li>
+        <li>Identified and blocked attacker IPs</li>
+        <li>Managed services</li>
+        <li>Performed system cleanup</li>
+    </ul>
+
+    <h4>🛠 Tools Used:</h4>
+    <ul>
+        <li><strong>Linux Ubuntu</strong>, TryHackMe</li>
+        <li>Bash, <code>systemctl</code>, <code>journalctl</code></li>
+        <li><code>iptables</code>, <code>grep</code>, <code>netstat</code></li>
+        <li><code>ausearch</code></li>
+    </ul>
+
     <ul class="actions">
         <li><a href="#" class="button project-close" data-target="linuxmonitoring">Close Project</a></li>
     </ul>
 </div>
-
 <div id="wireshark" class="project-content">
     <h2 class="major">📡 Wireshark Traffic Analysis</h2>
-    <p>Packet analysis and protocol investigation using Wireshark. Content goes here...</p>
+    
+    <p>
+        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7331684375245324288/" target="_blank">
+            🔗 LinkedIn Post - Wireshark Analysis
+        </a>
+    </p>
+
+    <h3>🌐✨🔍 Real-time Network Traffic Analysis</h3>
+    <p>Explored real-time network traffic using Wireshark – a complete end-to-end packet analysis project!</p>
+
+    <h4>🎯 Wireshark Features Applied:</h4>
+    <ul>
+        <li><strong>Captured live traffic</strong> using filters: <code>dns</code>, <code>tcp</code>, <code>tls</code></li>
+        <li><strong>Identified encrypted connections</strong> using TLS handshake (SNI field) - even without DNS info</li>
+        <li><strong>Extracted IP addresses</strong> directly from TLS packets</li>
+        <li><strong>Verified IP origin</strong> using <a href="https://ipinfo.io" target="_blank">ipinfo.io</a></li>
+        <li><strong>Follow TCP Stream</strong> to inspect encrypted data communication</li>
+    </ul>
+
+    <h4>🚨 TCP Analysis - Detected Errors:</h4>
+    <ul>
+        <li>Retransmissions</li>
+        <li>Duplicate ACKs</li>
+        <li>Zero window</li>
+        <li>And more...</li>
+    </ul>
+
+    <h4>📊 Visualizations Created:</h4>
+    <ul>
+        <li><strong>I/O Graphs</strong> - Traffic flow over time</li>
+        <li><strong>Statistics → Endpoints</strong> - IP-wise interactions</li>
+        <li><strong>Statistics → Conversations</strong> - Protocol-wise analysis</li>
+    </ul>
+
+    <h4>🔄 Client-Server Behavior Analysis:</h4>
+    <ul>
+        <li>Traced request-response directions</li>
+        <li>Identified client-server communication patterns</li>
+    </ul>
+
+    <h4>⚙️ Skills Improved:</h4>
+    <ul>
+        <li>Network troubleshooting</li>
+        <li>Packet-level understanding</li>
+        <li>Traffic pattern analysis</li>
+        <li>Encrypted traffic handling</li>
+    </ul>
+
     <ul class="actions">
         <li><a href="#" class="button project-close" data-target="wireshark">Close Project</a></li>
     </ul>
@@ -477,7 +596,44 @@ for free under the <a href="https://html5up.net/license">Creative Commons</a> li
 
 <div id="loginproject" class="project-content">
     <h2 class="major">🔐 Strong Login System</h2>
-    <p>Secure Python login system with authentication protection. Content goes here...</p>
+    
+    <p>
+        <a href="https://github.com/risha463/login-system" target="_blank">
+            🔗 [GitHub - login-system](https://github.com/risha463/login-system)
+        </a>
+        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7450919039712800768/" target="_blank">
+            🔗 LinkedIn Post
+        </a>
+    </p>
+
+    <span class="image main">
+        <img src="images/login.jpeg" alt="Secure Login System Demo" />
+    </span>
+
+    <h3>🔐 Hackers don't break systems — they exploit weak passwords 👀</h3>
+    <p>Built a <strong>Secure Login System in Python</strong> to understand authentication risks and implement real-world security measures.</p>
+
+    <h4>✨ Key Security Features:</h4>
+    <ul>
+        <li><strong>Username validation</strong> (length & input control)</li>
+        <li><strong>SQL injection protection</strong> (suspicious input detection)</li>
+        <li><strong>Strong password policy</strong> enforcement</li>
+        <li><strong>SHA-256 password hashing</strong> for secure storage</li>
+        <li><strong>Failed login tracking</strong></li>
+        <li><strong>Account lockout</strong> after 3 incorrect attempts</li>
+        <li><strong>5-minute temporary block</strong> against brute-force</li>
+    </ul>
+
+    <h4>🚫 Lockout Protection:</h4>
+    <p>Even with correct password, access is <strong>blocked during lockout period</strong> - real defense against repeated attacks!</p>
+
+    <h4>💡 Learning Outcomes:</h4>
+    <ul>
+        <li>Real-world authentication system design</li>
+        <li>Malicious input handling</li>
+        <li>Brute-force attack mitigation</li>
+    </ul>
+
     <ul class="actions">
         <li><a href="#" class="button project-close" data-target="loginproject">Close Project</a></li>
     </ul>
@@ -485,7 +641,40 @@ for free under the <a href="https://html5up.net/license">Creative Commons</a> li
 
 <div id="threatdetection" class="project-content">
     <h2 class="major">🐍 Smart Threat Detection System</h2>
-    <p>Python-based suspicious activity and threat detection system. Content goes here...</p>
+    
+    <p>
+        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7449443616621613056/" target="_blank">
+            🔗 LinkedIn Demo Video
+        </a>
+    </p>
+
+    <span class="image main">
+        <img src="images/Threat_detection.jpeg" alt="Threat Detection System" />
+    </span>
+
+    <h3>🚨 Real-time Threat Detection from Login Logs</h3>
+    <p>Built a <strong>Python-based Smart Threat Detection System</strong> that analyzes login activity to identify suspicious behavior.</p>
+
+    <h4>💻 Core Detection Features:</h4>
+    <ul>
+        <li><strong>🔐 Brute force login detection</strong></li>
+        <li><strong>🌐 Suspicious IP identification</strong> (high-frequency IPs)</li>
+        <li><strong>🚫 Malicious user blocking</strong></li>
+        <li><strong>📊 Login pattern analysis</strong></li>
+        <li><strong>📈 Data visualization</strong> with graphs</li>
+    </ul>
+
+    <h4>🎯 How It Works:</h4>
+    <ul>
+        <li>Monitors login attempts in real-time</li>
+        <li>Flags repeated failed logins from same IP</li>
+        <li>Detects unusual login patterns</li>
+        <li>Generates visual threat reports</li>
+    </ul>
+
+    <h4>📊 Real-world Security Application:</h4>
+    <p>Simple implementation showing how <strong>SOC systems monitor & respond to threats</strong> behind the scenes.</p>
+
     <ul class="actions">
         <li><a href="#" class="button project-close" data-target="threatdetection">Close Project</a></li>
     </ul>
@@ -493,7 +682,76 @@ for free under the <a href="https://html5up.net/license">Creative Commons</a> li
 
 <div id="salarypredictor" class="project-content">
     <h2 class="major">📊 Employee Salary Predictor (Streamlit)</h2>
-    <p>Machine learning dashboard built using Streamlit. Content goes here...</p>
+    
+    <p>
+        <a href="https://github.com/risha463/Employe-salary-predictor-streamlit" target="_blank">
+            🔗 [GitHub - Salary Predictor](https://github.com/risha463/Employe-salary-predictor-streamlit)
+        </a>
+    </p>
+
+    <h3>💼 ML-Powered Salary Prediction Web App</h3>
+    <p>Machine learning web app using <strong>Streamlit</strong> that predicts <strong>monthly & yearly salary</strong> based on employee attributes.</p>
+
+    <h4>📌 Key Features:</h4>
+    <ul>
+        <li><strong>🔍 Random Forest Regressor</strong> for accurate predictions</li>
+        <li><strong>📊 Visual bar charts</strong> for salary output</li>
+        <li><strong>🧠 ML + Rule-based</strong> fallback estimation</li>
+        <li><strong>📱 Mobile-friendly</strong> responsive design</li>
+        <li><strong>🎨 Modern UI</strong> with emojis & styling</li>
+    </ul>
+
+    <h4>🧠 Input Features:</h4>
+    <ul>
+        <li><strong>📅 Age</strong></li>
+        <li><strong>⚧️ Gender</strong></li>
+        <li><strong>🎓 Education Level</strong></li>
+        <li><strong>💼 Job Title</strong></li>
+        <li><strong>🧪 Years of Experience</strong></li>
+    </ul>
+
+    <h4>📊 Model Performance:</h4>
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr><th>Metric</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>MAE</strong></td><td>9,198.41</td></tr>
+            <tr><td><strong>R² Score</strong></td><td><strong>93.04%</strong></td></tr>
+        </tbody>
+    </table>
+    </div>
+
+    <h4>🔧 Tech Stack:</h4>
+    <ul>
+        <li><strong>Python 3.13+</strong>, Pandas, Scikit-learn</li>
+        <li><strong>Streamlit</strong>, Plotly</li>
+        <li><strong>Seaborn/Matplotlib</strong> for evaluation charts</li>
+    </ul>
+
+    <h4>🚀 Setup:</h4>
+    <pre><code>pip install -r requirements.txt
+streamlit run app.py</code></pre>
+
+    <h4>🌐 Live Demo:</h4>
+    <p><a href="https://employe-salary-predictor-app-dvhqvuv8n89ukgqgaxkox5.streamlit.app/" target="_blank">
+        🔗 Try Live App
+    </a></p>
+
+    <h4>💡 Future Enhancements:</h4>
+    <ul>
+        <li>Real-time API integration</li>
+        <li>Deep learning models</li>
+        <li>Downloadable salary reports</li>
+        <li>User authentication</li>
+    </ul>
+
+    <h4>🙋‍♀️ Made By:</h4>
+    <p><strong>Risha Gupta</strong><br/>
+    MCA Student | LPU<br/>
+    <a href="mailto:rishagupta463@gmail.com">rishagupta463@gmail.com</a></p>
+
     <ul class="actions">
         <li><a href="#" class="button project-close" data-target="salarypredictor">Close Project</a></li>
     </ul>
