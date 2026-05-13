@@ -1140,9 +1140,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1233,7 +1236,122 @@ input, select, textarea {
 		}
 
 /* Header */
+<article id="achievements">
+  <h2 class="major">Achievements</h2>
 
+  <p class="section-note">
+    40+ hands-on cybersecurity labs completed across SOC operations, blue team monitoring, web testing, and network analysis.
+  </p>
+
+  <div class="achievement-grid">
+    <div class="ach-box">
+      <h4>Platforms Practiced</h4>
+      <ul>
+        <li>LetsDefend</li>
+        <li>TryHackMe</li>
+        <li>DVWA</li>
+        <li>OWASP Labs</li>
+      </ul>
+    </div>
+
+    <div class="ach-box">
+      <h4>SOC & Blue Team Labs</h4>
+      <ul>
+        <li>Alert Investigation</li>
+        <li>SSH Brute Force Detection</li>
+        <li>Log Monitoring</li>
+        <li>Incident Response</li>
+        <li>Threat Detection</li>
+      </ul>
+    </div>
+
+    <div class="ach-box">
+      <h4>Web Security Labs</h4>
+      <ul>
+        <li>SQL Injection</li>
+        <li>Reflected XSS</li>
+        <li>Authentication Testing</li>
+        <li>Session Analysis</li>
+      </ul>
+    </div>
+
+    <div class="ach-box">
+      <h4>Network Security Labs</h4>
+      <ul>
+        <li>Wireshark Traffic Analysis</li>
+        <li>Packet Inspection</li>
+        <li>Protocol Investigation</li>
+      </ul>
+    </div>
+  </div>
+
+  <h4 style="margin-top:2rem;">Certifications & Badges</h4>
+  <p class="section-note">
+    Selected certifications, internship certificates, and platform badges from TryHackMe and LetsDefend.
+  </p>
+
+  <div class="cert-grid">
+    <div class="cert-card">
+      <p><strong>Tecnia Institute of Advanced Studies</strong><br>National Conference on Computing Informatics Network & Security</p>
+      <a href="https://github.com/risha463/cyber/raw/main/images/cert1.jpg" target="_blank">
+        <img src="images/cert1.jpg" alt="Tecnia Certificate">
+      </a>
+    </div>
+
+    <div class="cert-card">
+      <p><strong>NPTEL</strong><br>Google Cloud Computing Foundation</p>
+      <a href="https://github.com/risha463/cyber/raw/main/images/cert2.png" target="_blank">
+        <img src="images/cert2.png" alt="NPTEL Certificate">
+      </a>
+    </div>
+
+    <div class="cert-card">
+      <p><strong>AISECT LEARN</strong><br>Cyber Security Intern — Issued Jan 2026</p>
+      <a href="https://github.com/risha463/cyber/raw/main/images/cert3.jpeg" target="_blank">
+        <img src="images/cert3.jpeg" alt="AISECT Certificate">
+      </a>
+    </div>
+
+    <div class="cert-card">
+      <p><strong>Future Interns</strong><br>Cyber Security — Issued Nov 2025</p>
+      <a href="https://github.com/risha463/cyber/raw/main/images/cert4.jpeg" target="_blank">
+        <img src="images/cert4.jpeg" alt="Future Interns Certificate">
+      </a>
+    </div>
+
+    <div class="cert-card">
+      <p><strong>Coursera</strong><br>Google Cybersecurity Certificate — Issued Dec 2024</p>
+      <a href="https://github.com/risha463/cyber/raw/main/images/cert5.jpeg" target="_blank">
+        <img src="images/cert5.jpeg" alt="Coursera Certificate">
+      </a>
+    </div>
+
+    <div class="cert-card">
+      <p><strong>TryHackMe</strong><br>Pre Security Certificate — Issued Feb 22, 2026</p>
+      <a href="https://github.com/risha463/cyber/raw/main/images/cert6.png" target="_blank">
+        <img src="images/cert6.png" alt="TryHackMe Certificate">
+      </a>
+    </div>
+  </div>
+
+  <h4 style="margin-top:2rem;">Badges</h4>
+
+  <div class="badge-grid">
+    <div class="badge-card">
+      <p><strong>TryHackMe Badges</strong></p>
+      <a href="https://github.com/risha463/cyber/raw/main/images/all_badge.png" target="_blank">
+        <img src="images/all_badge.png" alt="TryHackMe Badges">
+      </a>
+    </div>
+
+    <div class="badge-card">
+      <p><strong>LetsDefend Badges</strong></p>
+      <a href="https://github.com/risha463/cyber/raw/main/images/all_badge1.png" target="_blank">
+        <img src="images/all_badge1.png" alt="LetsDefend Badges">
+      </a>
+    </div>
+  </div>
+</article>
 	#header {
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -1529,6 +1647,86 @@ input, select, textarea {
 		max-width: 100%;
 		z-index: 3;
 	}
+#main article {
+    width: 46rem;
+    max-width: calc(100% - 2rem);
+}
+
+#achievements .achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#achievements .ach-box {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+}
+
+#achievements .ach-box h4 {
+    margin: 0 0 0.75rem 0;
+    font-size: 0.78rem;
+    letter-spacing: 0.16rem;
+}
+
+#achievements .ach-box ul {
+    margin: 0;
+    padding-left: 1rem;
+    line-height: 1.6;
+}
+
+#achievements .section-note {
+    margin-bottom: 1rem;
+    color: rgba(255,255,255,0.82);
+    font-size: 0.95rem;
+}
+
+#achievements .cert-grid,
+#achievements .badge-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#achievements .cert-card,
+#achievements .badge-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 0.9rem;
+}
+
+#achievements .cert-card p,
+#achievements .badge-card p {
+    margin: 0 0 0.75rem 0;
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+#achievements .cert-card img,
+#achievements .badge-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 736px) {
+    #achievements .achievement-grid,
+    #achievements .cert-grid,
+    #achievements .badge-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #main article {
+        width: 100%;
+        max-width: 100%;
+    }
+}
 
 		#main article {
 			-moz-transform: translateY(0.25rem);
