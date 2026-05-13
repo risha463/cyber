@@ -1535,7 +1535,7 @@ input, select, textarea {
 #main article {
     padding: 4.5rem 2.5rem 1.5rem 2.5rem;
     position: relative;
-    width: 46rem;
+    width: 40rem;
     max-width: calc(100% - 2rem);
     background-color: rgba(27, 31, 34, 0.85);
     border-radius: 4px;
