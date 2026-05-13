@@ -1542,6 +1542,45 @@ input, select, textarea {
     opacity: 0;
     transform: translateY(0.25rem);
     transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
+	#contact {
+    width: 32rem;
+    max-width: calc(100% - 2rem);
+}
+
+#contact form {
+    width: 100%;
+}
+
+#contact .fields {
+    width: 100%;
+    margin-left: 0;
+}
+
+#contact .field.half,
+#contact .field.third,
+#contact .field.quarter {
+    width: 100%;
+}
+
+#contact input,
+#contact textarea,
+#contact select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#contact ul.actions {
+    width: 100%;
+    margin-left: 0;
+}
+
+#contact ul.actions li {
+    width: 100%;
+}
+
+#contact ul.actions li .button {
+    width: 100%;
+}
 }
 
 #achievements .achievement-grid {
